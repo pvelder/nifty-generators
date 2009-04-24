@@ -80,8 +80,8 @@ class NiftyScaffoldGenerator < Rails::Generator::Base
           m.template "views/#{view_language}/_form.html.#{view_language}", "app/views/#{plural_name}/_form.html.#{view_language}"
         end
         
-        m.template "views/#{view_language}/_items.html.#{view_language}", "app/views/#{plural_name}/_items.html.#{view_language}"
-        m.template "views/#{view_language}/_item.html.#{view_language}", "app/views/#{plural_name}/_item.html.#{view_language}"
+        m.template "views/#{view_language}/_items.html.#{view_language}", "app/views/#{plural_name}/_#{plural_name}.html.#{view_language}"
+        m.template "views/#{view_language}/_item.html.#{view_language}", "app/views/#{plural_name}/_#{singular_name}.html.#{view_language}"
       
         m.route_resources plural_name
         
