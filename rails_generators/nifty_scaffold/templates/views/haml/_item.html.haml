@@ -6,6 +6,6 @@
   %td= link_to 'Edit', edit_<%= singular_name %>_path(<%= singular_name %>)
   <%- end -%>
   <%- if action? :destroy -%>
-  %td= link_to 'Destroy', <%= singular_name %>, :confirm => 'Are you sure?', :method => :delete
+  %td= link_to 'Remove', <%= singular_name %>, :confirm => 'Are you sure?', :method => :delete
   <%- end -%>
 
