@@ -8,5 +8,5 @@
       = f.<%= attribute.field_type %> :<%= attribute.name %>, :class => "text"
     <%- end -%>
     %p
-      = f.submit "#{f.object.new_record? ? \"Create\" : \"Update\"} <%= singular_name.capitalize %>", :class => "button dialog"
+      = f.submit "#{f.object.new_record? ? "Create" : "Update"} <%= singular_name.capitalize %>", :class => "button dialog"
       
