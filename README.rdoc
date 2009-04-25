@@ -1,16 +1,15 @@
-= Nifty Generators
+= Forked Version of Nifty Generators
 
 A collection of useful Rails generator scripts.
 
 
 == Install
 
-  gem install nifty-generators
+  gem install twilson63-nifty-generators
 
-You may need to uninstall the older version if it's installed.
+== Forked changes
 
-  gem uninstall ryanb-nifty-generators
-
+Added jrs template pattern to the haml files, as well as added a new flag called ajaxify that will allow you to add the ajaxified pattern to the controller and views.
 
 == Usage
 
@@ -92,3 +91,5 @@ http://github.com/ryanb/nifty-generators/
 
 If you wish the generators behaved differently, please consider
 forking the project and modifying to your heart's content.
+
+
