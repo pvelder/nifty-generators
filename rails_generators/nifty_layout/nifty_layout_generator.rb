@@ -8,6 +8,7 @@ class NiftyLayoutGenerator < Rails::Generator::Base
     record do |m|
       m.directory 'app/views/layouts'
       m.directory 'public/stylesheets'
+      m.directory 'public/javascripts'
       m.directory 'app/helpers'
       
       if options[:haml]
