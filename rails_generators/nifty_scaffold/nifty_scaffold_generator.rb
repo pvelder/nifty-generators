@@ -80,9 +80,21 @@ class NiftyScaffoldGenerator < Rails::Generator::Base
           m.template "views/#{view_language}/_form.html.#{view_language}", "app/views/#{plural_name}/_form.html.#{view_language}"
         end
         
-        m.template "views/#{view_language}/_items.html.#{view_language}", "app/views/#{plural_name}/_#{plural_name}.html.#{view_language}"
-        m.template "views/#{view_language}/_item.html.#{view_language}", "app/views/#{plural_name}/_#{singular_name}.html.#{view_language}"
-      
+        if options[:haml]
+          m.template "views/#{view_language}/_items.html.#{view_language}", "app/views/#{plural_name}/_#{plural_name}.html.#{view_language}"
+          m.template "views/#{view_language}/_item.html.#{view_language}", "app/views/#{plural_name}/_#{singular_name}.html.#{view_language}"
+        end
+        
+        if options[:haml] and options[:ajaxify]
+          m.template "views/#{view_language}/_error.html.#{view_language}", "app/views/#{plural_name}/_error.html.#{view_language}"
+          m.template "views/#{view_language}/error.rjs", "app/views/#{plural_name}/error.rjs"
+
+          m.template "views/#{view_language}/create.rjs", "app/views/#{plural_name}/create.rjs"
+          m.template "views/#{view_language}/update.rjs", "app/views/#{plural_name}/update.rjs"
+          m.template "views/#{view_language}/dialog.rjs", "app/views/#{plural_name}/dialog.rjs"
+          
+        end
+        
         m.route_resources plural_name
         
         if rspec?

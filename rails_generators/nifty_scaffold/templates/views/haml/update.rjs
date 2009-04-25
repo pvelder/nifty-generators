@@ -1,0 +1,2 @@
+result = render :partial => "<%= singular_name %>", :object => @<%= singular_name %>
+page << "$('#<%= singular_name %>_#{@<%= singular_name %>.id}').replaceWith('#{ escape_javascript result }')"

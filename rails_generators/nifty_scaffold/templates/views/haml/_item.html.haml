@@ -1,4 +1,4 @@
-%tr
+%tr{:id => "<%= singular_name %>_#{<%= singular_name %>.id}"}
   <%- for attribute in attributes -%>
   %td= h <%= singular_name %>.<%= attribute.name %>
   <%- end -%>
