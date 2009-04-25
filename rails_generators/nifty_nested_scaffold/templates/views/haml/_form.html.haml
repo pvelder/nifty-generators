@@ -1,0 +1,11 @@
+#<%= singular_name %>_dialog
+  - form_for [@<%= parent_singular_name %>, @<%= singular_name %>] do |f|
+    = f.error_messages
+    <%- for attribute in attributes -%>
+    %p
+      = f.label :<%= attribute.name %>
+      = f.<%= attribute.field_type %> :<%= attribute.name %>, :class => "text"
+    <%- end -%>
+    %p
+      = f.submit "#{f.object.new_record? ? "Create" : "Update"} <%= singular_name.capitalize %>", :class => "button dialog"
+      

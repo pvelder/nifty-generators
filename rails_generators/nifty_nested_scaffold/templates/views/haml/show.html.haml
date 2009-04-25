@@ -1,0 +1,6 @@
+<%- for attribute in attributes -%>
+%p
+  %strong <%= attribute.column.human_name.titleize %>:
+  =h @<%= singular_name %>.<%= attribute.name %>
+<%- end -%>
+
