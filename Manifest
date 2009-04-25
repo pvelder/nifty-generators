@@ -33,7 +33,13 @@ rails_generators/nifty_config/templates/config.yml
 rails_generators/nifty_config/templates/load_config.rb
 rails_generators/nifty_config/USAGE
 rails_generators/nifty_layout/nifty_layout_generator.rb
+rails_generators/nifty_layout/templates/_footer.html.haml
+rails_generators/nifty_layout/templates/_header.html.haml
+rails_generators/nifty_layout/templates/_javascripts.html.haml
+rails_generators/nifty_layout/templates/_navigation.html.haml
+rails_generators/nifty_layout/templates/_stylesheets.html.haml
 rails_generators/nifty_layout/templates/helper.rb
+rails_generators/nifty_layout/templates/javascript.js
 rails_generators/nifty_layout/templates/layout.html.erb
 rails_generators/nifty_layout/templates/layout.html.haml
 rails_generators/nifty_layout/templates/stylesheet.css
