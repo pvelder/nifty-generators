@@ -2,7 +2,6 @@ CHANGELOG
 lib/nifty_generators.rb
 LICENSE
 Manifest
-nifty-generators.backup
 nifty-generators.gemspec
 rails_generators/nifty_authentication/lib/insert_commands.rb
 rails_generators/nifty_authentication/nifty_authentication_generator.rb
