@@ -1,11 +1,14 @@
 !!! Strict
-%html{html_attrs}
+%html{html_attrs('en-US')}
   
   %head
     %title
       = h(yield(:title) || "Untitled")
     %meta{"http-equiv"=>"Content-Type", :content=>"text/html; charset=utf-8"}/
-    = stylesheet_link_tag '<%= file_name %>'
+
+    = render :partial => "shared/stylesheets"
+    = render :partial => "shared/javascripts"
+    
     = yield(:head)
   
   %body
@@ -13,7 +16,10 @@
       - flash.each do |name, msg|
         = content_tag :div, msg, :id => "flash_#{name}"
       
-      - if show_title?
-        %h1=h yield(:title)
+      = render :partial => "shared/header"
+      = render :partial => "shared/navigation"
+
+      #content.span-24
+        = yield
+    = render :partial => "shared/footer"
       
-      = yield
