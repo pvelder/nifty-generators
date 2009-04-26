@@ -44,6 +44,8 @@ rails_generators/nifty_layout/templates/layout.html.haml
 rails_generators/nifty_layout/templates/stylesheet.css
 rails_generators/nifty_layout/templates/stylesheet.sass
 rails_generators/nifty_layout/USAGE
+rails_generators/nifty_metal/nifty_metal_generator.rb
+rails_generators/nifty_metal/templates/metal.rb
 rails_generators/nifty_nested_scaffold/nifty_nested_scaffold_generator.rb
 rails_generators/nifty_nested_scaffold/templates/actions/create.rb
 rails_generators/nifty_nested_scaffold/templates/actions/destroy.rb
