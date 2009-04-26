@@ -8,6 +8,6 @@
     = render :partial => "<%= singular_name %>", :collection => <%= plural_name %>
 
 <%- if actions? :new -%>
-%p= link_to "New <%= singular_name.titleize %>", new_<%= singular_name %>_path(@<%= parent_singular_name %>), :class => "button <%= options[:ajaxify] ? 'dialog_link' : '' %>"
+%p= link_to "New <%= singular_name.titleize %>", new_<%= parent_singular_name %>_<%= singular_name %>_path(@<%= parent_singular_name %>), :class => "button <%= options[:ajaxify] ? 'dialog_link' : '' %>"
 
 <%- end -%>
