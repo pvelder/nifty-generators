@@ -3,9 +3,9 @@
   %td= h <%= singular_name %>.<%= attribute.name %>
   <%- end -%>
   <%- if action? :edit -%>
-  %td= link_to 'Edit', edit_<%= singular_name %>_path(<%= singular_name %>), :class => "<%= options[:ajaxify] ? 'dialog_link' : '' %>"
+  %td= link_to 'Edit', edit_<%= singular_name %>_path(@<%= parent_singular_name %>, <%= singular_name %>), :class => "<%= options[:ajaxify] ? 'dialog_link' : '' %>"
   <%- end -%>
   <%- if action? :destroy -%>
-  %td= link_to 'Remove', <%= singular_name %>, :confirm => 'Are you sure?', :method => :delete
+  %td= link_to 'Remove', <%= singular_name %>_path(@<%= parent_singular_name %>, <%= singular_name %>), :confirm => 'Are you sure?', :method => :delete
   <%- end -%>
 

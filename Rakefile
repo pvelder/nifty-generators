@@ -2,7 +2,7 @@ require 'rubygems'
 require 'rake'
 require 'echoe'
 
-Echoe.new('nifty-generators', '0.3.2') do |p|
+Echoe.new('nifty-generators', '0.3.3') do |p|
   p.project        = "forked-niftygenerators"
   p.description    = "A collection of useful generator scripts for Rails."
   p.url            = "http://github.com/twilson63/nifty-generators"

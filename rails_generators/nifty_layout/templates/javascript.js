@@ -1,9 +1,7 @@
 $(document).ready( function(){
-  //$('.rounded').corners();
-  $('input:submit').addClass('ui-corner-all');
-  //$('input:submit').corners();
+  $('.button').addClass('ui-corner-all');
   $('a.button').css('color','white');
-  //$('a.button').corners();
+
   $('#navigation').addClass('ui-corner-all');
   $('#footer').addClass('ui-corner-all');
 	

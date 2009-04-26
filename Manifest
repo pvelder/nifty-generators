@@ -2,6 +2,7 @@ CHANGELOG
 lib/nifty_generators.rb
 LICENSE
 Manifest
+nifty-generators.gemspec
 rails_generators/nifty_authentication/lib/insert_commands.rb
 rails_generators/nifty_authentication/nifty_authentication_generator.rb
 rails_generators/nifty_authentication/templates/authentication.rb
@@ -114,6 +115,9 @@ rails_generators/nifty_scaffold/templates/fixtures.yml
 rails_generators/nifty_scaffold/templates/helper.rb
 rails_generators/nifty_scaffold/templates/migration.rb
 rails_generators/nifty_scaffold/templates/model.rb
+rails_generators/nifty_scaffold/templates/tests/cucumber/factories.rb
+rails_generators/nifty_scaffold/templates/tests/cucumber/manage_item.feature
+rails_generators/nifty_scaffold/templates/tests/cucumber/step_definitions/items_steps.rb
 rails_generators/nifty_scaffold/templates/tests/rspec/actions/create.rb
 rails_generators/nifty_scaffold/templates/tests/rspec/actions/destroy.rb
 rails_generators/nifty_scaffold/templates/tests/rspec/actions/edit.rb
