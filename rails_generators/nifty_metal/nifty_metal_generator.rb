@@ -1,7 +1,7 @@
 class NiftyMetalGenerator < Rails::Generator::Base
   def initialize(runtime_args, runtime_options = {})
     super
-    #@name = @args.first || 'app'
+    #@model_name = @args.first || 'app'
   end
   
   def manifest

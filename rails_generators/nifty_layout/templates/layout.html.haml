@@ -12,7 +12,7 @@
     = yield(:head)
   
   %body
-    #container.clearfix
+    #container.clearfix.ui-corner-all
       - flash.each do |name, msg|
         = content_tag :div, msg, :id => "flash_#{name}"
       
