@@ -82,12 +82,12 @@ class NiftyNestedScaffoldGenerator < Rails::Generator::Base
           m.template "views/#{view_language}/_form.html.#{view_language}", "app/views/#{plural_name}/_form.html.#{view_language}"
         end
         
-        if options[:haml]
+        unless options[:erb]
           m.template "views/#{view_language}/_items.html.#{view_language}", "app/views/#{plural_name}/_#{plural_name}.html.#{view_language}"
           m.template "views/#{view_language}/_item.html.#{view_language}", "app/views/#{plural_name}/_#{singular_name}.html.#{view_language}"
         end
         
-        if options[:haml] and options[:ajaxify]
+        if !options[:erb] and options[:ajaxify]
           m.template "views/#{view_language}/_error.html.#{view_language}", "app/views/#{plural_name}/_error.html.#{view_language}"
           m.template "views/#{view_language}/error.rjs", "app/views/#{plural_name}/error.rjs"
 
@@ -168,7 +168,7 @@ class NiftyNestedScaffoldGenerator < Rails::Generator::Base
   
   def render_form
     if form_partial?
-      if options[:haml]
+      unless options[:erb]
         "= render :partial => 'form'"
       else
         "<%= render :partial => 'form' %>"
@@ -215,7 +215,7 @@ class NiftyNestedScaffoldGenerator < Rails::Generator::Base
 protected
   
   def view_language
-    options[:haml] ? 'haml' : 'erb'
+    options[:erb] ? 'erb' : 'haml'
   end
   
   def test_framework
@@ -234,7 +234,7 @@ protected
     opt.on("--skip-timestamps", "Don't add timestamps to migration file.") { |v| options[:skip_timestamps] = v }
     opt.on("--skip-controller", "Don't generate controller, helper, or views.") { |v| options[:skip_controller] = v }
     opt.on("--invert", "Generate all controller actions except these mentioned.") { |v| options[:invert] = v }
-    opt.on("--haml", "Generate HAML views instead of ERB.") { |v| options[:haml] = v }
+    opt.on("--erb", "Generate ERB views instead of HAML.") { |v| options[:erb] = v }
     opt.on("--testunit", "Use test/unit for test files.") { options[:test_framework] = :testunit }
     opt.on("--rspec", "Use RSpec for test files.") { options[:test_framework] = :rspec }
     opt.on("--shoulda", "Use Shoulda for test files.") { options[:test_framework] = :shoulda }
